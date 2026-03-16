@@ -1,0 +1,9 @@
+{
+  "name": "@learn/shared",
+  "type": "module",
+  "private": true,
+  "exports": {
+    ".": "./index.ts",
+    "./logger": "./logger.ts"
+  }
+}

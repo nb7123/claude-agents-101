@@ -1,0 +1,8 @@
+{
+  "name": "@learn/s06-context-compact",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@learn/shared": "workspace:*"
+  }
+}

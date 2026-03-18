@@ -4,6 +4,11 @@
   "workspaces": {
     "": {
       "name": "startup-ai",
+      "dependencies": {
+        "@anthropic-ai/claude-agent-sdk": "^0.2.76",
+        "@anthropic-ai/sdk": "^0.78.0",
+        "zod": "^4.3.6",
+      },
       "devDependencies": {
         "@types/bun": "latest",
         "typescript": "^5",
@@ -12,43 +17,37 @@
     "sessions/s01-agent-loop": {
       "name": "@learn/s01-agent-loop",
       "dependencies": {
-        "@anthropic-ai/claude-agent-sdk": "^0.2.76",
-        "@anthropic-ai/sdk": "^0.78.0",
         "@learn/shared": "workspace:*",
-        "zod": "^4.3.6",
       },
     },
     "sessions/s02-tool-system": {
       "name": "@learn/s02-tool-system",
       "dependencies": {
-        "@anthropic-ai/sdk": "^0.78.0",
         "@learn/shared": "workspace:*",
-        "zod": "^4.3.6",
       },
     },
     "sessions/s03-planning": {
       "name": "@learn/s03-planning",
       "dependencies": {
-        "@anthropic-ai/sdk": "^0.78.0",
         "@learn/shared": "workspace:*",
-        "zod": "^4.3.6",
       },
     },
     "sessions/s04-subagents": {
       "name": "@learn/s04-subagents",
       "dependencies": {
-        "@anthropic-ai/claude-agent-sdk": "^0.2.76",
-        "@anthropic-ai/sdk": "^0.78.0",
         "@learn/shared": "workspace:*",
-        "zod": "^4.3.6",
       },
     },
     "sessions/s05-skills": {
       "name": "@learn/s05-skills",
       "dependencies": {
-        "@anthropic-ai/sdk": "^0.78.0",
         "@learn/shared": "workspace:*",
-        "zod": "^4.3.6",
+      },
+    },
+    "sessions/s06-context-compact": {
+      "name": "@learn/s06-context-compact",
+      "dependencies": {
+        "@learn/shared": "workspace:*",
       },
     },
     "shared": {
@@ -103,6 +102,8 @@
     "@learn/s04-subagents": ["@learn/s04-subagents@workspace:sessions/s04-subagents"],
 
     "@learn/s05-skills": ["@learn/s05-skills@workspace:sessions/s05-skills"],
+
+    "@learn/s06-context-compact": ["@learn/s06-context-compact@workspace:sessions/s06-context-compact"],
 
     "@learn/shared": ["@learn/shared@workspace:shared"],
 

@@ -7,18 +7,18 @@
     "sessions/*"
   ],
   "scripts": {
-    "s01": "bun run sessions/s01-agent-loop/index.ts",
-    "s02": "bun run sessions/s02-tool-system/index.ts",
-    "s03": "bun run sessions/s03-planning/index.ts",
-    "s04": "bun run sessions/s04-subagents/index.ts",
-    "s05": "bun run sessions/s05-skills/index.ts",
-    "s06": "bun run sessions/s06-context-compact/index.ts",
-    "s07": "bun run sessions/s07-task-system/index.ts",
-    "s08": "bun run sessions/s08-background-tasks/index.ts",
-    "s09": "bun run sessions/s09-agent-teams/index.ts",
-    "s10": "bun run sessions/s10-team-protocols/index.ts",
-    "s11": "bun run sessions/s11-autonomous-agents/index.ts",
-    "s12": "bun run sessions/s12-worktree-isolation/index.ts"
+    "s01": "bun install --silent && bun run sessions/s01-agent-loop/index.ts",
+    "s02": "bun install --silent && bun run sessions/s02-tool-system/index.ts",
+    "s03": "bun install --silent && bun run sessions/s03-planning/index.ts",
+    "s04": "bun install --silent && bun run sessions/s04-subagents/index.ts",
+    "s05": "bun install --silent && bun run sessions/s05-skills/index.ts",
+    "s06": "bun install --silent && bun run sessions/s06-context-compact/index.ts",
+    "s07": "bun install --silent && bun run sessions/s07-task-system/index.ts",
+    "s08": "bun install --silent && bun run sessions/s08-background-tasks/index.ts",
+    "s09": "bun install --silent && bun run sessions/s09-agent-teams/index.ts",
+    "s10": "bun install --silent && bun run sessions/s10-team-protocols/index.ts",
+    "s11": "bun install --silent && bun run sessions/s11-autonomous-agents/index.ts",
+    "s12": "bun install --silent && bun run sessions/s12-worktree-isolation/index.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.78.0",

@@ -14,6 +14,7 @@
 //   compaction block 会替换掉被压缩的历史，API 依赖它恢复上下文
 
 import Anthropic from "@anthropic-ai/sdk";
+import type { BetaCompactionBlock } from "@anthropic-ai/sdk/resources/beta/messages/messages";
 import { log } from "@learn/shared";
 
 const client = new Anthropic();
@@ -137,8 +138,11 @@ async function chatWithCompaction(turns: number): Promise<void> {
       .join("");
 
     // 检查是否触发了 compaction
+    // 用 SDK 导出的 BetaCompactionBlock 类型断言做类型收窄
+    // TypeScript 会验证 .type 字段值与 BetaCompactionBlock.type 字面量类型匹配
+    // 若 SDK 修改了类型定义，编译器会在此处报错而非静默失败
     const hasCompaction = response.content.some(
-      (b) => b.type === "context_compaction"  // compaction block 类型
+      (b): b is BetaCompactionBlock => b.type === "compaction"
     );
 
     log.agent(

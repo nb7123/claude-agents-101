@@ -1,0 +1,10 @@
+{
+  "name": "@learn/s02-tool-system",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.78.0",
+    "@learn/shared": "workspace:*",
+    "zod": "^4.3.6"
+  }
+}

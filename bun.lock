@@ -18,6 +18,39 @@
         "zod": "^4.3.6",
       },
     },
+    "sessions/s02-tool-system": {
+      "name": "@learn/s02-tool-system",
+      "dependencies": {
+        "@anthropic-ai/sdk": "^0.78.0",
+        "@learn/shared": "workspace:*",
+        "zod": "^4.3.6",
+      },
+    },
+    "sessions/s03-planning": {
+      "name": "@learn/s03-planning",
+      "dependencies": {
+        "@anthropic-ai/sdk": "^0.78.0",
+        "@learn/shared": "workspace:*",
+        "zod": "^4.3.6",
+      },
+    },
+    "sessions/s04-subagents": {
+      "name": "@learn/s04-subagents",
+      "dependencies": {
+        "@anthropic-ai/claude-agent-sdk": "^0.2.76",
+        "@anthropic-ai/sdk": "^0.78.0",
+        "@learn/shared": "workspace:*",
+        "zod": "^4.3.6",
+      },
+    },
+    "sessions/s05-skills": {
+      "name": "@learn/s05-skills",
+      "dependencies": {
+        "@anthropic-ai/sdk": "^0.78.0",
+        "@learn/shared": "workspace:*",
+        "zod": "^4.3.6",
+      },
+    },
     "shared": {
       "name": "@learn/shared",
     },
@@ -62,6 +95,14 @@
     "@img/sharp-win32-x64": ["@img/sharp-win32-x64@0.34.5", "", { "os": "win32", "cpu": "x64" }, "sha512-+29YMsqY2/9eFEiW93eqWnuLcWcufowXewwSNIT6UwZdUUCrM3oFjMWH/Z6/TMmb4hlFenmfAVbpWeup2jryCw=="],
 
     "@learn/s01-agent-loop": ["@learn/s01-agent-loop@workspace:sessions/s01-agent-loop"],
+
+    "@learn/s02-tool-system": ["@learn/s02-tool-system@workspace:sessions/s02-tool-system"],
+
+    "@learn/s03-planning": ["@learn/s03-planning@workspace:sessions/s03-planning"],
+
+    "@learn/s04-subagents": ["@learn/s04-subagents@workspace:sessions/s04-subagents"],
+
+    "@learn/s05-skills": ["@learn/s05-skills@workspace:sessions/s05-skills"],
 
     "@learn/shared": ["@learn/shared@workspace:shared"],
 

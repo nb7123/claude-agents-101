@@ -20,6 +20,11 @@
     "s11": "bun run sessions/s11-autonomous-agents/index.ts",
     "s12": "bun run sessions/s12-worktree-isolation/index.ts"
   },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.78.0",
+    "@anthropic-ai/claude-agent-sdk": "^0.2.76",
+    "zod": "^4.3.6"
+  },
   "devDependencies": {
     "@types/bun": "latest",
     "typescript": "^5"

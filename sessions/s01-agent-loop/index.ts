@@ -66,6 +66,16 @@ async function executeTool(
   return `Error: unknown tool "${name}"`;
 }
 
+const readEnv = (env: string): string | undefined => {
+  if (typeof (globalThis as any).process !== 'undefined') {
+    return (globalThis as any).process.env?.[env]?.trim() ?? undefined;
+  }
+  if (typeof (globalThis as any).Deno !== 'undefined') {
+    return (globalThis as any).Deno.env?.get?.(env)?.trim();
+  }
+  return undefined;
+};
+
 // ─────────────────────────────────────────────
 // 3. Agentic Loop
 //    这是整个 s01 的核心，请仔细阅读每一步
@@ -89,7 +99,7 @@ async function runAgent(userPrompt: string): Promise<void> {
     // ① 调用 LLM，使用 streaming（防止长回复超时）
     //   stream.on("text") 实时打印文字，finalMessage() 等待完整响应
     const stream = client.messages.stream({
-      model: "claude-opus-4-6",
+      model: readEnv("ANTHROPIC_MODEL") || "claude-sonnet-4-6",
       max_tokens: 4096,
       tools: TOOLS,
       messages,
@@ -135,9 +145,9 @@ async function runAgent(userPrompt: string): Promise<void> {
           // 每个 tool_result 必须携带对应的 tool_use_id
           // 这是 Claude 知道哪个工具返回了什么的方式
           toolResults.push({
-            type: "tool_result",
             tool_use_id: block.id,
             content: result,
+            type: "tool_result"
           });
         }
       }

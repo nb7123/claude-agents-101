@@ -1,0 +1,8 @@
+{
+  "name": "@learn/s07-task-system",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@learn/shared": "workspace:*"
+  }
+}

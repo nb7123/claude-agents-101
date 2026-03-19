@@ -1,0 +1,8 @@
+{
+  "name": "@learn/s09-agent-teams",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@learn/shared": "workspace:*"
+  }
+}

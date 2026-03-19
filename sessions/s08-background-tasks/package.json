@@ -1,0 +1,8 @@
+{
+  "name": "@learn/s08-background-tasks",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@learn/shared": "workspace:*"
+  }
+}

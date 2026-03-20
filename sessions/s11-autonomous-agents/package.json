@@ -1,0 +1,8 @@
+{
+  "name": "@learn/s11-autonomous-agents",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@learn/shared": "workspace:*"
+  }
+}

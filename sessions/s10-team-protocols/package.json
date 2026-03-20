@@ -1,0 +1,8 @@
+{
+  "name": "@learn/s10-team-protocols",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@learn/shared": "workspace:*"
+  }
+}

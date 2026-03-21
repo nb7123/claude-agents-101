@@ -1,0 +1,8 @@
+{
+  "name": "@learn/s12-worktree-isolation",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@learn/shared": "workspace:*"
+  }
+}

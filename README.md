@@ -34,17 +34,17 @@
 
 | 课程 | 主题 | 核心机制 | 格言 |
 |------|------|----------|------|
-| s07 | Task System | 文件型任务 CRUD + 依赖图 | "Break big goals into small tasks, order them, persist to disk" |
-| s08 | Background Tasks | 异步后台任务 | "Run slow operations in the background; the agent keeps thinking" |
+| s07 | Task System | 持久化任务 CRUD + 依赖图（DAG） | "Break big goals into small tasks, order them, persist to disk" |
+| s08 | Background Tasks | 依赖驱动的并发调度 + worker agent | "Plan once, execute concurrently" |
 
 ### Phase 4 — Teams（团队协作）
 
 | 课程 | 主题 | 核心机制 | 格言 |
 |------|------|----------|------|
-| s09 | Agent Teams | 多 Agent + JSONL 邮箱通信 | "When the task is too big for one, delegate to teammates" |
-| s10 | Team Protocols | 统一请求/响应协议 + FSM | "Teammates need shared communication rules" |
-| s11 | Autonomous Agents | Agent 自主认领任务 | "Teammates scan the board and claim tasks themselves" |
-| s12 | Worktree Isolation | Git worktree 任务隔离 | "Each works in its own directory, no interference" |
+| s09 | Agent Teams | Blackboard Pattern + 角色分工 | "Specialized roles, shared blackboard" |
+| s10 | Team Protocols | 结构化消息总线 + 共识评审 | "Agree before you ship" |
+| s11 | Autonomous Agents | Claude Agent SDK `query()` | "Give it a goal, not a script" |
+| s12 | Worktree Isolation | Git worktree 沙盒隔离 | "Each agent gets its own sandbox" |
 
 ## 快速开始
 

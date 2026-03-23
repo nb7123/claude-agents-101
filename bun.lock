@@ -50,6 +50,42 @@
         "@learn/shared": "workspace:*",
       },
     },
+    "sessions/s07-task-system": {
+      "name": "@learn/s07-task-system",
+      "dependencies": {
+        "@learn/shared": "workspace:*",
+      },
+    },
+    "sessions/s08-background-tasks": {
+      "name": "@learn/s08-background-tasks",
+      "dependencies": {
+        "@learn/shared": "workspace:*",
+      },
+    },
+    "sessions/s09-agent-teams": {
+      "name": "@learn/s09-agent-teams",
+      "dependencies": {
+        "@learn/shared": "workspace:*",
+      },
+    },
+    "sessions/s10-team-protocols": {
+      "name": "@learn/s10-team-protocols",
+      "dependencies": {
+        "@learn/shared": "workspace:*",
+      },
+    },
+    "sessions/s11-autonomous-agents": {
+      "name": "@learn/s11-autonomous-agents",
+      "dependencies": {
+        "@learn/shared": "workspace:*",
+      },
+    },
+    "sessions/s12-worktree-isolation": {
+      "name": "@learn/s12-worktree-isolation",
+      "dependencies": {
+        "@learn/shared": "workspace:*",
+      },
+    },
     "shared": {
       "name": "@learn/shared",
     },
@@ -104,6 +140,18 @@
     "@learn/s05-skills": ["@learn/s05-skills@workspace:sessions/s05-skills"],
 
     "@learn/s06-context-compact": ["@learn/s06-context-compact@workspace:sessions/s06-context-compact"],
+
+    "@learn/s07-task-system": ["@learn/s07-task-system@workspace:sessions/s07-task-system"],
+
+    "@learn/s08-background-tasks": ["@learn/s08-background-tasks@workspace:sessions/s08-background-tasks"],
+
+    "@learn/s09-agent-teams": ["@learn/s09-agent-teams@workspace:sessions/s09-agent-teams"],
+
+    "@learn/s10-team-protocols": ["@learn/s10-team-protocols@workspace:sessions/s10-team-protocols"],
+
+    "@learn/s11-autonomous-agents": ["@learn/s11-autonomous-agents@workspace:sessions/s11-autonomous-agents"],
+
+    "@learn/s12-worktree-isolation": ["@learn/s12-worktree-isolation@workspace:sessions/s12-worktree-isolation"],
 
     "@learn/shared": ["@learn/shared@workspace:shared"],
 

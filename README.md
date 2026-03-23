@@ -1,100 +1,127 @@
-# startup-ai
+# claude-agents-101-js
 
-使用 Claude API 和 Claude Agent SDK 构建 Agent 应用的渐进式学习项目。
+A progressive, hands-on course for building AI agent applications with the Claude API and Claude Agent SDK — 12 sessions, from a raw agentic loop to a full multi-agent team.
 
-共 12 课，每课引入一个新机制，从零开始手写 agentic loop，最终实现多 Agent 协作系统。
+> **Language note:** Course content (session READMEs and inline code comments) is written in Chinese, targeting the Chinese developer community. The code itself is TypeScript and fully readable regardless of language.
 
-## 技术栈
+## What you'll build
 
-- **运行时**: [Bun](https://bun.sh) — 原生 TypeScript，无需编译步骤
-- **语言**: TypeScript（strict mode）
-- **模块系统**: ESM
-- **核心 SDK**: `@anthropic-ai/sdk` + `@anthropic-ai/claude-agent-sdk`
-- **Schema 验证**: Zod
+Each session introduces one new mechanism. By the end you'll have implemented:
 
-## 课程结构
+- A minimal agentic loop from scratch (~50 lines, no framework)
+- A declarative tool system with automatic schema generation
+- A planning layer that keeps agents on track
+- Subagent spawning with isolated contexts
+- On-demand skill loading to avoid bloated system prompts
+- Three context compaction strategies for long-running agents
+- A persistent task system with a dependency graph (DAG)
+- A dependency-driven concurrent scheduler with worker agents
+- A multi-agent team communicating via a shared blackboard
+- A structured review protocol with consensus voting
+- An autonomous agent powered by the Claude Agent SDK
+- Git worktree sandboxing so concurrent agents never interfere
 
-### Phase 1 — The Loop（基础循环）
+## Tech stack
 
-| 课程 | 主题 | 核心机制 | 格言 |
-|------|------|----------|------|
-| s01 | Agent Loop | 手写最小 agentic loop | "One loop & Bash is all you need" |
+| | |
+|---|---|
+| Runtime | [Bun](https://bun.sh) — native TypeScript, no compile step |
+| Language | TypeScript (strict mode) |
+| Module system | ESM |
+| Claude SDK | `@anthropic-ai/sdk` + `@anthropic-ai/claude-agent-sdk` |
+| Schema | Zod + `betaZodTool` |
+
+## Curriculum
+
+### Phase 1 — The Loop
+
+| Session | Topic | Key mechanism | Motto |
+|---------|-------|---------------|-------|
+| s01 | Agent Loop | Hand-written agentic loop | "One loop & Bash is all you need" |
 | s02 | Tool System | `betaZodTool` + tool runner | "Adding a tool means adding one handler" |
 
-### Phase 2 — Planning & Knowledge（规划与知识）
+### Phase 2 — Planning & Knowledge
 
-| 课程 | 主题 | 核心机制 | 格言 |
-|------|------|----------|------|
-| s03 | Planning | TodoWrite 计划层 | "An agent without a plan drifts" |
-| s04 | Subagents | Claude Agent SDK 子代理 | "Break big tasks down; each subtask gets a clean context" |
-| s05 | Skills | 动态知识注入 | "Load knowledge when you need it, not upfront" |
-| s06 | Context Compact | 上下文压缩 | "Context will fill up; you need a way to make room" |
+| Session | Topic | Key mechanism | Motto |
+|---------|-------|---------------|-------|
+| s03 | Planning | Todo list as agent working memory | "An agent without a plan drifts" |
+| s04 | Subagents | Claude Agent SDK `query()` | "Break big tasks down; each subtask gets a clean context" |
+| s05 | Skills | Lazy-loaded knowledge files | "Load knowledge when you need it, not upfront" |
+| s06 | Context Compact | Truncation / summarization / SDK compaction | "Context will fill up; you need a way to make room" |
 
-### Phase 3 — Persistence（持久化）
+### Phase 3 — Persistence
 
-| 课程 | 主题 | 核心机制 | 格言 |
-|------|------|----------|------|
-| s07 | Task System | 持久化任务 CRUD + 依赖图（DAG） | "Break big goals into small tasks, order them, persist to disk" |
-| s08 | Background Tasks | 依赖驱动的并发调度 + worker agent | "Plan once, execute concurrently" |
+| Session | Topic | Key mechanism | Motto |
+|---------|-------|---------------|-------|
+| s07 | Task System | Persistent CRUD + DAG dependency graph | "Break big goals into small tasks, order them, persist to disk" |
+| s08 | Background Tasks | Dependency-driven concurrent scheduler | "Plan once, execute concurrently" |
 
-### Phase 4 — Teams（团队协作）
+### Phase 4 — Teams
 
-| 课程 | 主题 | 核心机制 | 格言 |
-|------|------|----------|------|
-| s09 | Agent Teams | Blackboard Pattern + 角色分工 | "Specialized roles, shared blackboard" |
-| s10 | Team Protocols | 结构化消息总线 + 共识评审 | "Agree before you ship" |
-| s11 | Autonomous Agents | Claude Agent SDK `query()` | "Give it a goal, not a script" |
-| s12 | Worktree Isolation | Git worktree 沙盒隔离 | "Each agent gets its own sandbox" |
+| Session | Topic | Key mechanism | Motto |
+|---------|-------|---------------|-------|
+| s09 | Agent Teams | Blackboard pattern + role specialization | "Specialized roles, shared blackboard" |
+| s10 | Team Protocols | Typed message bus + consensus review | "Agree before you ship" |
+| s11 | Autonomous Agents | Agent SDK `query()` with built-in tools | "Give it a goal, not a script" |
+| s12 | Worktree Isolation | Git worktree sandboxing per agent | "Each agent gets its own sandbox" |
 
-## 快速开始
+## Quick start
 
-**1. 安装 Bun**
+**1. Install Bun**
 
 ```bash
 curl -fsSL https://bun.sh/install | bash
 ```
 
-**2. 安装依赖**
+**2. Install dependencies**
 
 ```bash
 bun install
 ```
 
-**3. 配置环境变量**
+**3. Set up environment**
 
 ```bash
 cp .env.example .env
-# 编辑 .env，填入你的 ANTHROPIC_API_KEY
+# Add your ANTHROPIC_API_KEY
 ```
 
-**4. 运行课程**
+**4. Run any session**
 
 ```bash
-bun run s01   # 运行 s01
-bun run s02   # 运行 s02
-# ...
-
-# 开发模式（热重载）
-bun --watch run sessions/s01-agent-loop/index.ts
+bun run s01
+bun run s02
+# ... through s12
 ```
 
-## 项目结构
+Each session is self-contained. Sessions s07→s08 share a task file; all others are independent.
+
+## Project structure
 
 ```
-startup-ai/
-├── shared/                     # @learn/shared — 公共工具（logger 等）
+claude-agents-101-js/
+├── shared/                  # @learn/shared — logger and common utilities
 ├── sessions/
-│   ├── s01-agent-loop/         # 每课独立的 package.json + index.ts
+│   ├── s01-agent-loop/      # Each session: package.json + index.ts + README.md
 │   ├── s02-tool-system/
-│   └── ...
-├── package.json                # Workspace root
-└── tsconfig.json               # Bun 最优 TS 配置
+│   ├── s03-planning/
+│   ├── s04-subagents/
+│   ├── s05-skills/
+│   ├── s06-context-compact/
+│   ├── s07-task-system/
+│   ├── s08-background-tasks/
+│   ├── s09-agent-teams/
+│   ├── s10-team-protocols/
+│   ├── s11-autonomous-agents/
+│   └── s12-worktree-isolation/
+├── package.json             # Bun workspace root
+└── tsconfig.json
 ```
 
-每个 session 是独立的 workspace package，拥有自己的依赖声明，通过 `@learn/shared` 共享公共工具。
+Each session is an independent workspace package. Dependencies are declared per-session; shared utilities come from `@learn/shared`.
 
-## 参考
+## References
 
-- [Anthropic API Docs](https://docs.anthropic.com)
-- [Claude Agent SDK (TypeScript)](https://github.com/anthropics/claude-agent-sdk-typescript)
-- 课程设计参考：[learn-claude-code](https://github.com/shareAI-lab/learn-claude-code)（Python 版本）
+- [Anthropic API Documentation](https://docs.anthropic.com)
+- [Claude Agent SDK — TypeScript](https://github.com/anthropics/claude-agent-sdk-typescript)
+- [Anthropic SDK — TypeScript](https://github.com/anthropics/anthropic-sdk-typescript)

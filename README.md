@@ -37,33 +37,33 @@ Each session introduces one new mechanism. By the end you'll have implemented:
 
 | Session | Topic | Key mechanism | Motto |
 |---------|-------|---------------|-------|
-| s01 | Agent Loop | Hand-written agentic loop | "One loop & Bash is all you need" |
-| s02 | Tool System | `betaZodTool` + tool runner | "Adding a tool means adding one handler" |
+| [s01](sessions/s01-agent-loop/) | Agent Loop | Hand-written agentic loop | "One loop & Bash is all you need" |
+| [s02](sessions/s02-tool-system/) | Tool System | `betaZodTool` + tool runner | "Adding a tool means adding one handler" |
 
 ### Phase 2 — Planning & Knowledge
 
 | Session | Topic | Key mechanism | Motto |
 |---------|-------|---------------|-------|
-| s03 | Planning | Todo list as agent working memory | "An agent without a plan drifts" |
-| s04 | Subagents | Claude Agent SDK `query()` | "Break big tasks down; each subtask gets a clean context" |
-| s05 | Skills | Lazy-loaded knowledge files | "Load knowledge when you need it, not upfront" |
-| s06 | Context Compact | Truncation / summarization / SDK compaction | "Context will fill up; you need a way to make room" |
+| [s03](sessions/s03-planning/) | Planning | Todo list as agent working memory | "An agent without a plan drifts" |
+| [s04](sessions/s04-subagents/) | Subagents | Claude Agent SDK `query()` | "Break big tasks down; each subtask gets a clean context" |
+| [s05](sessions/s05-skills/) | Skills | Lazy-loaded knowledge files | "Load knowledge when you need it, not upfront" |
+| [s06](sessions/s06-context-compact/) | Context Compact | Truncation / summarization / SDK compaction | "Context will fill up; you need a way to make room" |
 
 ### Phase 3 — Persistence
 
 | Session | Topic | Key mechanism | Motto |
 |---------|-------|---------------|-------|
-| s07 | Task System | Persistent CRUD + DAG dependency graph | "Break big goals into small tasks, order them, persist to disk" |
-| s08 | Background Tasks | Dependency-driven concurrent scheduler | "Plan once, execute concurrently" |
+| [s07](sessions/s07-task-system/) | Task System | Persistent CRUD + DAG dependency graph | "Break big goals into small tasks, order them, persist to disk" |
+| [s08](sessions/s08-background-tasks/) | Background Tasks | Dependency-driven concurrent scheduler | "Plan once, execute concurrently" |
 
 ### Phase 4 — Teams
 
 | Session | Topic | Key mechanism | Motto |
 |---------|-------|---------------|-------|
-| s09 | Agent Teams | Blackboard pattern + role specialization | "Specialized roles, shared blackboard" |
-| s10 | Team Protocols | Typed message bus + consensus review | "Agree before you ship" |
-| s11 | Autonomous Agents | Agent SDK `query()` with built-in tools | "Give it a goal, not a script" |
-| s12 | Worktree Isolation | Git worktree sandboxing per agent | "Each agent gets its own sandbox" |
+| [s09](sessions/s09-agent-teams/) | Agent Teams | Blackboard pattern + role specialization | "Specialized roles, shared blackboard" |
+| [s10](sessions/s10-team-protocols/) | Team Protocols | Typed message bus + consensus review | "Agree before you ship" |
+| [s11](sessions/s11-autonomous-agents/) | Autonomous Agents | Agent SDK `query()` with built-in tools | "Give it a goal, not a script" |
+| [s12](sessions/s12-worktree-isolation/) | Worktree Isolation | Git worktree sandboxing per agent | "Each agent gets its own sandbox" |
 
 ## Quick start
 

@@ -125,3 +125,4 @@ Each session is an independent workspace package. Dependencies are declared per-
 - [Anthropic API Documentation](https://docs.anthropic.com)
 - [Claude Agent SDK — TypeScript](https://github.com/anthropics/claude-agent-sdk-typescript)
 - [Anthropic SDK — TypeScript](https://github.com/anthropics/anthropic-sdk-typescript)
+- [learn-claude-code](https://github.com/shareAI-lab/learn-claude-code) — original Python version this course is based on

@@ -1,4 +1,4 @@
-# claude-agents-101-js
+# claude-agents-101
 
 A progressive, hands-on course for building AI agent applications with the Claude API and Claude Agent SDK — 12 sessions, from a raw agentic loop to a full multi-agent team.
 
